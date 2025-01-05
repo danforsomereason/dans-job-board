@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"/>
+        <title>Applied For</title>
+    </head>
+    <body>
+        <header>
+            <h1>Jobs Applied For</h1>
+                <div class="applied-page-navigation-links">
+                    <a href="#job-entry-form">Job Entry Form</a> | <a href="#application-status">Application Status</a>
+                </div>
+        </header>
+       <main>
+            <h2>Enter a job you've applied for</h2>
+            <!-- This will be a form to enter details about a job I've applied for -->
+            <form method="post" action="#" id="job-entry-form">
+                <fieldset><legend>Company Info</legend>
+                    <label for="employer-name">Employer Name:</label>
+                    <input type="text" id="employer-name" name="employer" required placeholder="Ex. WebDev Solutions, Inc."/>
+                    <label for="role">Role:</label>
+                    <input type="text" id="role" name="role" required placeholder="Ex. React Developer"/>
+                    <label for="pay">Pay:</label>
+                    <input type="text" id="pay" name="pay-range" placeholder="80000">
+                </fieldset>
+                <fieldset><legend>Job Location</legend>
+                    <label>
+                        <input type="radio" id="in-person" name="position-location"> In-Person
+                    </label>
+                    <label>
+                        <input type="radio" id="hybrid" name="position-location"> Hybrid
+                    </label>
+                    <label>
+                        <input type="radio" id="remote" name="position-location"> Remote
+                    </label>
+                </fieldset>
+                <fieldset><legend>Job Type</legend>
+                    <label>
+                        <input type="radio" id="clinical" name="job-type"> Clinical
+                    </label>
+                    <label>
+                        <input type="radio" id="programming" name="job-type"> Programming
+                    </label>
+                </fieldset>
+                <fieldset><legend>Supplemental Submissions</legend>
+                    <label>
+                        <input type="checkbox" id="resume" name="application-supplement" checked> Resume
+                    </label>
+                    <label>
+                        <input type="checkbox" id="cover-letter" name="application-supplement"> Cover Letter
+                    </label>
+                    <label>
+                        <input type="checkbox" id="references" name="application-supplement"> References
+                    </label>
+                    <label>
+                        <input type="checkbox" id="portfolio" name="application-supplement"> Portfolio
+                    </label>
+                    <label>
+                        <input type="checkbox" id="direct-outreach" name="application-supplement"> Direct Outreach
+                    </label>
+                </fieldset>
+                <fieldset><legend>Source</legend>
+                    <label for="job-source">Where did you find this posting?</label>
+                    <select id="job-source" name="job-source">
+                        <option value="" disabled selected>Select a source</option>
+                        <option value="linkedin" >LinkedIn</option>
+                        <option value="indeed">Indeed</option>
+                        <option value="company-site">Company Site</option>
+                        <option value="third-party-site">Third-Party Site</option>
+                    </select>
+                    <!-- JS script to render third-party site entry if selected -->
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+            <h3 id="application-status">Status</h3>
+            <!-- Decided against a table and would rather save the results to a csv and the render cards -->
+            <!-- <table id="application-status">
+                <caption>Jobs I've Applied For</caption>
+                <thead>
+                    <tr>
+                        <th>Employer Name</th>
+                        <th>Role</th>
+                        <th>Pay</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+
+            </table> -->
+        </main>
+    </body>
+</html>
